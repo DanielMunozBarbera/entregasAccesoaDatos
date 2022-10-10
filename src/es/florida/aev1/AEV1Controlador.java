@@ -11,6 +11,12 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+/**
+ * @author Daniel Muñoz Barbera - Clase sobre la cual se pone a la escucha los
+ *         JButton que componen nuestro programa y los enlaza con los metodos de
+ *         la clase AEV1Modelo
+ * 
+ */
 public class AEV1Controlador {
 
 	private AEV1Modelo modelo;
@@ -23,12 +29,21 @@ public class AEV1Controlador {
 
 	public static String ruta;
 
+	/**
+	 * @param modelo
+	 * @param vista  Metodo constructor de la clase AEV1Controlador, incluye una
+	 *               llamada al metodo control().
+	 */
 	public AEV1Controlador(AEV1Modelo modelo, AEV1Vista vista) {
 		this.modelo = modelo;
 		this.vista = vista;
 		control();
 	}
 
+	/**
+	 * Metodo principal de la clase, en el cual se añaden los actionListeners a los
+	 * botones y se les enlaza con los metodos de la clase AEV1Modelo
+	 */
 	public void control() {
 
 		// BOTON MOSTRAR DIRECTORIO
@@ -104,7 +119,7 @@ public class AEV1Controlador {
 		actionListenerMostrarArchivo = new ActionListener() {
 			public void actionPerformed(ActionEvent actionEvent) {
 				String archivoMostrar = vista.getTextFieldOperaciones().getText();
-				modelo.mostrarArchivo(ruta + "/" + archivoMostrar, vista);
+				modelo.mostrarFichero(ruta + "/" + archivoMostrar, vista);
 			}
 		};
 		vista.getBotonMostrarArchivo().addActionListener(actionListenerMostrarArchivo);
@@ -156,6 +171,13 @@ public class AEV1Controlador {
 		vista.getBotonGuardarCambios().addActionListener(actionListenerGuardarCambios);
 	}
 
+	/**
+	 * @param ruta
+	 * @throws Exception El unico metodo que esta separado de la clase AEV1Modelo.
+	 *                   Se utiliza para mostrar el directorio en el JTextArea
+	 *                   principal realizando un comando dir de cmd utilizando
+	 *                   ProcessBuilder y Process.
+	 */
 	public void mostrarDirectorio(String ruta) throws Exception {
 		this.ruta = ruta;
 		ProcessBuilder pb = new ProcessBuilder("CMD", "/C", "DIR");
