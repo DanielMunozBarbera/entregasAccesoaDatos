@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jgoodies-common-1.8.0.jar" sourcepath="jgoodies-common-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="jgoodies-forms-1.8.0.jar" sourcepath="jgoodies-forms-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Spluaks/Desktop/TeleCole 2Curso/Acceso a Datos/eclipse/DAM ADD T4 AEV3/commons-codec-1.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Spluaks/Desktop/TeleCole 2Curso/Acceso a Datos/eclipse/DAM ADD T4 AEV3/json-20210307.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Spluaks/Desktop/TeleCole 2Curso/Acceso a Datos/eclipse/DAM ADD T4 AEV3/mongo-java-driver-3.12.10.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
